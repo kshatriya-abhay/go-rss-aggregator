@@ -37,7 +37,7 @@ func (apiCfg apiConfig) handlerCreateFeed(w http.ResponseWriter, r *http.Request
 		UserID:    user.ID,
 	})
 	if err != nil {
-		respondWithError(w, 400, fmt.Sprintf("Couldn't create user: %v", err))
+		respondWithError(w, 400, fmt.Sprintf("Couldn't create feed: %v", err))
 		return
 	}
 
