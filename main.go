@@ -22,13 +22,6 @@ type apiConfig struct {
 
 func main() {
 
-	feed, err := urlToFeed("https://www.wagslane.dev/index.xml")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println(feed)
-
 	godotenv.Load(".env")
 
 	portString := os.Getenv("PORT")
@@ -72,6 +65,7 @@ func main() {
 
 	v1Router.Post("/users", apiCfg.handlerCreateUser)
 	v1Router.Get("/users", apiCfg.middlewareAuth(apiCfg.handlerGetUser))
+	v1Router.Get("/getPostsForUser", apiCfg.middlewareAuth(apiCfg.handlerGetPostsForUser))
 
 	v1Router.Post("/feeds", apiCfg.middlewareAuth(apiCfg.handlerCreateFeed))
 	v1Router.Get("/feeds", apiCfg.handlerGetFeeds)
