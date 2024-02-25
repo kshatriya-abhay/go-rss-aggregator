@@ -19,14 +19,15 @@
 Method: POST
 Endpoint: /users
 Sample Payload:
-```
+```json
 {
-    name: "Abhay"
+    "name": "Abhay"
 }
 ```
 <details>
   <summary>Sample Response</summary>
-```
+
+```json
 {
     "id": "2091380c-1702-458f-a0d0-c4476775ac9e",
     "created_at": "2024-02-25T10:50:35.946012Z",
@@ -42,14 +43,15 @@ Method: GET
 Endpoint: /users
 Payload is not required
 Required header (sample):
-```
+```json
 {
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
 <details>
   <summary>Sample Response</summary>
-  ```
+  
+  ```json
 {
     "id": "2091380c-1702-458f-a0d0-c4476775ac9e",
     "created_at": "2024-02-25T10:50:35.946012Z",
@@ -64,21 +66,22 @@ Required header (sample):
 Method: POST
 Endpoint: /feeds
 Sample Payload:
-```
+```json
 {
     "name": "TechCrunch",
     "url": "https://techcrunch.com/feed/"
 }
 ```
 Required header (sample):
-```
+```json
 {
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
 <details>
   <summary>Sample Response</summary>
-```
+
+```json
 {
     "id": "3728502d-b193-4ed6-b9a2-d8a1cccb1bc3",
     "created_at": "2024-02-25T11:05:43.878948Z",
@@ -96,7 +99,8 @@ Endpoint: /feeds
 Payload is not required
 <details>
   <summary>Sample Response</summary>
-```
+
+```json
 [
     {
         "id": "3728502d-b193-4ed6-b9a2-d8a1cccb1bc3",
@@ -122,20 +126,21 @@ Payload is not required
 Method: POST
 Endpoint: /feed_follows
 Sample Payload:
-```
+```json
 {
     "feed_id" : "3728502d-b193-4ed6-b9a2-d8a1cccb1bc3"
 }
 ```
 Required header (sample):
-```
+```json
 {
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
 <details>
   <summary>Sample Response</summary>
-```
+
+```json
 {
     "id": "44d22f7b-e723-458b-88d7-7652f0e80a87",
     "created_at": "2024-02-25T15:29:01.294011Z",
@@ -151,14 +156,15 @@ Method: GET
 Endpoint: /feed_follows
 Payload is not required
 Required header (sample):
-```
+```json
 {
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
 <details>
   <summary>Sample Response</summary>
-```
+
+```json
 {
     "id": "44d22f7b-e723-458b-88d7-7652f0e80a87",
     "created_at": "2024-02-25T15:29:01.294011Z",
@@ -175,7 +181,7 @@ Endpoint: /feed_follows/{FeedFollowID}
 FeedFollowID should be the ID fetched from GET /feed_follows
 Payload is not required
 Required header (sample):
-```
+```json
 {
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
@@ -187,14 +193,15 @@ Method: `GET`
 Endpoint: `/feed_follows`
 Payload is not required
 Required header (sample):
-```
+```json
 {
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
 <details>
   <summary>Sample Response</summary>
-```
+
+```json
 [
     {
         "id": "cc0e18d2-d8f2-4902-97b1-5234acb8e4a2",
