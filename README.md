@@ -24,7 +24,8 @@ Sample Payload:
     name: "Abhay"
 }
 ```
-Sample Response
+<details>
+  <summary>Sample Response</summary>
 ```
 {
     "id": "2091380c-1702-458f-a0d0-c4476775ac9e",
@@ -34,6 +35,7 @@ Sample Response
     "api_key": "1609d1edc07a8692f8640e5eabd5574a2ef2c3dfd8f3a0ce732f494a42d57937"
 }
 ```
+</details>
 
 ## Get user data (authenticated)
 Method: GET
@@ -45,8 +47,9 @@ Required header (sample):
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
-Sample Response
-```
+<details>
+  <summary>Sample Response</summary>
+  ```
 {
     "id": "2091380c-1702-458f-a0d0-c4476775ac9e",
     "created_at": "2024-02-25T10:50:35.946012Z",
@@ -55,6 +58,7 @@ Sample Response
     "api_key": "1609d1edc07a8692f8640e5eabd5574a2ef2c3dfd8f3a0ce732f494a42d57937"
 }
 ```
+</details>
 
 ## Create RSS Feed (authenticated)
 Method: POST
@@ -72,7 +76,8 @@ Required header (sample):
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
-Sample Response
+<details>
+  <summary>Sample Response</summary>
 ```
 {
     "id": "3728502d-b193-4ed6-b9a2-d8a1cccb1bc3",
@@ -83,11 +88,14 @@ Sample Response
     "user_id": "5a551d87-c746-4960-9638-9b20c52a9348"
 }
 ```
+</details>
+
 ## Get All RSS Feeds
 Method: GET
 Endpoint: /feeds
 Payload is not required
-Sample Response
+<details>
+  <summary>Sample Response</summary>
 ```
 [
     {
@@ -108,6 +116,8 @@ Sample Response
     }
 ]
 ```
+</details>
+
 ## Follow a Feed
 Method: POST
 Endpoint: /feed_follows
@@ -123,7 +133,8 @@ Required header (sample):
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
-Sample Response
+<details>
+  <summary>Sample Response</summary>
 ```
 {
     "id": "44d22f7b-e723-458b-88d7-7652f0e80a87",
@@ -133,6 +144,8 @@ Sample Response
     "feed_id": "3728502d-b193-4ed6-b9a2-d8a1cccb1bc3"
 }
 ```
+</details>
+
 ## Get the Feeds a User follows
 Method: GET
 Endpoint: /feed_follows
@@ -143,7 +156,8 @@ Required header (sample):
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
-Sample Response
+<details>
+  <summary>Sample Response</summary>
 ```
 {
     "id": "44d22f7b-e723-458b-88d7-7652f0e80a87",
@@ -153,6 +167,8 @@ Sample Response
     "feed_id": "3728502d-b193-4ed6-b9a2-d8a1cccb1bc3"
 }
 ```
+</details>
+
 ## Unfollow a Feed
 Method: DELETE
 Endpoint: /feed_follows/{FeedFollowID}
@@ -166,10 +182,9 @@ Required header (sample):
 ```
 No response body will be sent, status code should be 200.
 ## Get Aggregated Feed
-<details>
-<summary>Expand</summary>
-Method: GET
-Endpoint: /feed_follows
+
+Method: `GET`
+Endpoint: `/feed_follows`
 Payload is not required
 Required header (sample):
 ```
@@ -177,7 +192,8 @@ Required header (sample):
     "Authorization": "ApiKey c103ca32fee579530ef9abefc3894bb4ba7ddc2e5affb2e4e84497f062f5aa9f"
 }
 ```
-Sample Response
+<details>
+  <summary>Sample Response</summary>
 ```
 [
     {
